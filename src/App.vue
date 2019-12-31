@@ -1,28 +1,33 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container">
+      <roll-button></roll-button>
+      <show-dice></show-dice>
+      <table-view></table-view>
+      <reset-button></reset-button>
+    </div>
+    <!-- <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import RollButton from "./components/RollButton.vue";
+import ShowDice from "./components/ShowDice.vue";
+import TableView from "./components/TableView.vue";
+import ResetButton from "./components/ResetButton.vue";
 
 export default {
-  name: 'app',
+  props: ["dice"],
+  name: "app",
   components: {
-    HelloWorld
+    RollButton,
+    ShowDice,
+    TableView,
+    ResetButton
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
