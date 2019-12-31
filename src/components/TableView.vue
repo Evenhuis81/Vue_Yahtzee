@@ -1,6 +1,7 @@
 <template>
-  <div class="columns is-centered" v-show="dice.length">
+  <div class="columns is-centered">
     <div class="column is-narrow">
+      <!-- <li v-for="(message, index) in messageList" :item="message" :key="index">{{ message }}</li> -->
       <table class="table is-bordered">
         <thead>
           <!-- <tr>
@@ -41,7 +42,17 @@
 <script>
 export default {
   name: "TableView",
-  props: ["dice"]
+  props: ["diceArray"],
+  data: function() {
+    return {
+      // messageList: []
+    };
+  }
+  // watch: {
+  //   msg: function() {
+  //     this.messageList.push(this.msg);
+  //   }
+  // }
 };
 </script>
 

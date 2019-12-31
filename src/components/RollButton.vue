@@ -9,10 +9,11 @@
 
 <script>
 export default {
+  name: "RollButton",
   data() {
     return {
-      buttonMsg: "Roll the dice!",
-      dice: []
+      dice: [],
+      buttonMsg: "Roll the dice!"
     };
   },
   methods: {
@@ -23,8 +24,12 @@ export default {
         const dicevalue = Math.ceil(Math.random() * 6);
         this.dice.push(dicevalue);
       }
+      this.$emit("diceData", this.dice);
     }
   }
+  // created() {
+  // eslint-disable-next-line no-console
+  // }
 };
 </script>
 
